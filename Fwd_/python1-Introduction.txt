@@ -1,0 +1,201 @@
+What is Python::
+................
+
+* Python is a cross-platform programming language, meaning, it runs on multiple platforms like Windows, Mac OS X, Linux, Unix and has even been ported to the Java and .NET virtual machines. 
+
+* It is free and open source.
+
+* Even though most of today’s Linux and Mac have Python preinstalled in it, the version might be out-of-date. 
+* So, it is always a good idea to install the most current version. You can download the latest version of Python and install it.
+
+_________________________________________________________________________
+		   How to install the Python??_________________________________________________________________________
+
+
+Download and install Python:
+............................
+1. to download python go to www.python.org and download the python latest version of python 3.7.1 as cmpatible for you computer system.
+
+2. install by clicking next next and python will be installed.
+
+
+There are various ways to start Python.
+
+1. Intermediate mode-
+
+Typing python in the command line will invoke the interpreter in immediate mode. We can directly type in Python expressions and press enter to get the output.
+
+2. Script mode-
+This mode is used to execute Python program written in a file. Such a file is called a script. Scripts can be saved to disk for future use. Python scripts have the extension .py, meaning that the filename ends with .py.
+To execute this file in script mode we simply write python helloWorld.py at the command prompt.
+
+
+3. Integrated Development Environment (IDE)-
+We can use any text editing software to write a Python script file.
+We just need to save it with the .py extension. But using an IDE can make our life a lot easier. IDE is a piece of software that provides useful features like code hinting, syntax highlighting and checking, file explorers etc. to the programmer for application development.
+
+
+
+
+
+
+________________________________________________________________________
+ 
+ History of Python:: 
+
+1. python is a general purpose high level programming language.
+2. GUIDO VAN ROSSAM developed python in 1990 while working at national reasearch institute at neitherland, but officilly made available in 1991.
+3. c,c++, java are statically typed programming language wether, Python is dynamically typed programming language.
+
+.........................................................................
+
+why the name is python??
+
+In 1969-1974 there was the best funny show BBC(british broadcosting company ) where Monty Pythons's circus is a very fuunny show and people were addicted for that show.
+
+Bacause of this python name is came to known.
+Python programming borrowed most of the features from another programming language-
+	1. functional Programming from- c language
+	2. object oriented programming from = c++ Programming
+	3. scripting language- from shell script and perl language
+	4. modular programming language from- Modula-3
+	
+Most of the syntax borrowed from C language and ABC language.
+...........................................
+_________________________________________________________________________
+
+Features of Python::
+
+1. It is simple and easy to learn.
+	1. Length of the code is very less.
+       	2. Readability is more easy.
+2. Python is open-source and free -ware.
+3.It is high level Programming Language.
+4.*Plateform Independent
+5.*Portable  
+6.*****Dynamically typed
+7.Both procedure oriented and object Oriented
+8.Interpreted
+9.******Extensible
+10.*****Embedded
+11.*********Rich Libraries
+
+
+_________________________________________________________________________
+
+Core Python is mainly used in developing machine leraning, AI and IoT application and also we can consider the main use of Python in developing the window based application.  
+_________________________________________________________________________
+  
+1.  Easy-to-learn: Python has few keywords, simple structure, and a cle arly defined syntax. This allows a student to pick up the language quickly.  
+   
+ 2.  Easy-to-read: Python code is more clearly defined and visible to the eyes.  
+  
+3.  Easy-to-maintain: Python's source code is fairly easy-to-maintain.  
+
+4. A broad standard library: Python's bulk of the library is very portable and crossplatform compatible on UNIX, Windows, and Macintosh.  
+  
+5.  Interactive Mode: Python has support for an interactive mode, which all ows interactive testing and debugging of snippets of code.  
+  
+6.   Portable: Python can run on a wide variety of hardware platforms and has  the same interface on all platforms.   
+
+Extendable: You can add low-level modules to the Python interpreter. These modules enable programmers to add or customize their tools to be more efficient.  
+
+7. Databases: Python provides interfaces to all major commercial databases.  
+
+8. GUI Programming: Python supports GUI applications that can be created and ported to many system calls, libraries and windows systems, such as Windows MFC, Macintosh, and the X Window system of Unix.  
+
+9. Scalable: Python provides a better structure and support for large programs than shell scripting. 
+
+
+_________________________________________________________________________
+
+Limitation of Python::
+........................
+
+1. Performance wise pyhton is not upto the mark because of Interpreted.
+2. dosen't support mobile application.
+
+
+
+======================
+Myth: python is not suitable for large sacle application.
+
+
+Flavors of Python:
+...................
+
+1. c-Python= It is used for the c-language code with Pyhton. standard flavour of Python.
+
+2.JPython or Jython= This python is developed to work with the java Programming.
+
+3.IronPython= This python is developed to work with the microsoft( c# and .net) Programming Language.
+
+4.Pypy= pis python fr speed, inside python virtual machine internally JIT compiler is working which improves the performance.
+
+5. RubyPython= it can be used for the ruby platform, for ruby based application.
+
+6. anacondaPython= It is used for the big-data handling we go for anaconda. As to handle hugev data  with the big-data and hadoop.
+
+7. stackless(Python for concurrency)- Parrallely  the things executed so for this purpose we use stackless Python.
+
+
+............................................
+
+Versions of Python--
+
+Python 1.0 = jan 1994
+Python 2.0 =october 2000
+Python 3.0 = dec 2008
+
+as new version should provide support for old program.
+
+Python-3 is recommended to use beacuse python-2 is used only for the 2020 after that python-2 would not b available in the market by the python org.
+
+
+print "hello"   ///valid in python-2 but not in python-3
+
+print ("hello")  //python-3
+
+
+long datatype dosn't supported by python-3.
+
+................................................
+_________________________________________________________________________
+
+Python Memory Management:
+
+1. Memory management in python is managed by Python private heap space. All Python objects and data structures are located in a private heap. The programmer does not have access to this private heap. The python interpreter takes care of this instead.
+2. The allocation of heap space for Python objects is done by Python’s memory manager. The core API gives access to some tools for the programmer to code.
+3. Python also has an inbuilt garbage collector, which recycles all the unused memory and so that it can be made available to the heap space.
+_________________________________________________________________________
+_________________________________________________________________________
+Identifier:: The name which can be used for identification purpose that name in python program is known as identifier.
+
+x=10
+def f1():
+class Test(Exception):
+
+
+##variable name,class name or method name is known as identifier.
+
+1. alphabate sybols( both upper_case and lower_case).
+	cash=10
+	ca$h=10
+
+2. Identifier should not starts with digits.
+   total123=10
+   123total=10
+
+3. ifdentifier are case-sensitive, we can't use reserved words as the identifier.
+
+    x=10
+    y=20
+
+4. there is no length limit in declaring variable.
+
+
+_name= means this variable is defined as the private.
+__id= means this variable is defined as protected.
+
+__class__ = means language defined special name. this is specially defined for the constructor only.
+

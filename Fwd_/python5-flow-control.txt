@@ -1,0 +1,192 @@
+
+flow control::
+...............................................
+in which order the statements are going to be execute that thing is done by the flow control.
+
+there are flow control statement are divided into three parts:
+
+ 1. conditional statements:
+
+
+   1.    	if():
+	          option_1
+		else:
+	          option_2
+
+
+indentation is very important part in python. if there is an problem in indentation then python interpreter throws execption automatically.
+	a=input("entr the name")
+	if(a=="shweta"):
+    		print ("true value")
+	else:
+    		print("false value selected")
+
+  
+
+   2.  		 if():
+	          option_1
+		elif :
+	          option_2
+		elif :
+	          option_2
+
+
+	a=input("entr food")
+	if(a=="aalloo paratha"):
+    		print ("chilliii")
+	elif (a=="white-rasgulla"):
+    		print("sweet")
+	elif (a=="burger"):
+    		print("tastey")
+
+
+  3. if-elif-else
+
+.....................................................
+Program-Practise:
+...................
+1. print that the number is positive or negative.
+2. can you read two numbers from the command prompt and tell which is smaller and greater.
+3. write a program and check that the number is even or odd.
+4. Print the marksheet of a student
+5. print the greater number amongest five number.
+6. Print login succesful if username and password is correct.
+
+_________________________________________________________________________
+
+
+2.  Iterative statements- 
+....................................
+
+A group of statements are required to execute iterativly such type of statements are known as iterative statements.
+
+    1. for loop
+................
+for eachelememt in sequence:
+       do some action
+
+here, sequence is nothing just collection of list,tuple, string  
+    
+	for x in range(0,20):
+    		print (x)
+
+        
+	for x in range(10):
+    		print (x)
+
+	for x in range(1,20,2):
+    		print (x)
+
+	a=shweta
+	for x in a:
+    	     print (a)
+
+________________________________________________________________________
+  
+2. while loop
+    when  you want to itertion would be in advance.
+
+   while condition:
+         Body
+
+
+	x=1
+	while x<=10:
+    	      print(x)
+   	      x+=1
+
+Practise::
+..............
+
+1. WAP sum of 10 natural number.
+2. WAP to check the palidrome of number.
+3. WAP to reverse of an number.
+4. WAP to print the multiplication of the digit.
+
+.........................................................
+infinity loops::
+
+1. WAP if the name is not Python, continue the asking for name,  as Pyhton name got exit from the loop.  
+
+
+........................................
+
+Nested Loops::
+   loop inside loop comes under the nested loop.
+
+________________________________________________________________________ 
+
+  3. Transfer statements
+......................................
+    to transfer the control from one satements to anther statements  we use transfer statments.
+1. break
+    break means stop the current flow if condition matched. 
+   
+2. continue
+     skip current situation and continue further statement.
+
+	a="shweta"
+	for val in a:
+   	   if val=='h' orval=='t':
+           continue
+        print(val)
+
+  
+
+3. pass
+    pass is a keyword in python.   
+    if you want to define empty block then we can go for pass statement.
+    it is empty statement
+    it is null statement
+
+In Python programming, as pass is a null statement. The difference between a comment and pass statement in Python is that, while the interpreter ignores a comment entirely, pass is not ignored.
+
+
+
+	sequence = {'p', 'a', 's', 's'}
+
+	for val in sequence:
+    
+		pass
+
+_________________________________________________________________________
+Practise:
+ 1. what is diffrence between while loop and for loop.
+ 2. how to exit from the loop?
+
+
+
+
+
+
+del statement:
+ del is a keyword in python .
+it  is used to delete the variable if there is no longer uses.
+
+	s1="shweta"
+	print (s1)
+	del s1
+	print(s1)
+
+
+
+
+* diffrence between del and none....
+
+del keyword permanently dlete the object
+while none means pointing none value but exist in memory.
+
+    
+
+
+
+
+
+
+''''''''
+name=""
+while (name!="shweta"):
+    name=input("Enter the name")
+print("welcome:")
+   
+''''''''

@@ -1,0 +1,28 @@
+Array:
+..........................................
+
+1. Array is a collection of similar data elements used to store multiple values of single data elements.
+
+2. Array alwys fixed in size and the size f array called as index of an array.
+3. Index starts from 0 and last index will be n-1.
+
+
+In python array is similar as the list but the diffrence is that array contains the similar data items wether list contains the different different data element.
+
+______________________________________________________________________
+
+Declaration of Array:
+import Array as ar
+
+2. append() :- This function is used to add the value mentioned in its arguments at the end of the array.
+
+3. insert(i,x) :- This function is used to add the value at the position specified in its argument.
+
+4. pop() :- This function removes the element at the position mentioned in its argument, and returns it.
+
+5. remove() :- This function is used to remove the first occurrence of the value mentioned in its arguments.
+
+6. index() :- This function returns the index of the first occurrence of value mentioned in arguments.
+
+7. reverse() :- This function reverses the array.
+	

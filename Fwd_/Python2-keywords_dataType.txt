@@ -1,0 +1,240 @@
+   Reserved words(Keywords)
+...............................................
+  In Python, keywords are case sensitive.
+ There are 33 reserved keywords in the Python.
+
+true,false,none(null),and, or,not,is,if,else,elif (switch statement is not avalble in python),while, for,break, (do-while is not available in python) continue,return,in ,yield, try,except, finally, raise,assert, import,from, as, class, def, pass, global, non-local, lambda, del, with
+
+
+assert keyword is used for debugging purpose.
+print is python defined function not a keyword.
+
+
+..........................................
+Note::
+
+1. all reserved keywords are the alphabate symbols.
+
+similar, for the keywords if we use as a data specification the error will be occurred.
+
+::::::::::
+  to know the keywords we can use as- 
+ 	import keyword
+	 keyword.kwlist
+
+
+['and', 'as', 'assert', 'break', 'class', 'continue', 'def', 'del', 'elif', 'else', 'except', 'exec', 'finally', 'for', 'from', 'global', 'if', 'import', 'in', 'is', 'lambda', 'not', 'or', 'pass', 'print', 'raise', 'return', 'try', 'while', 'with', 'yield']
+........................................
+
+_________________________________________________________________________
+
+Python Indentation:
+
+Most of the programming languages like C, C++, Java use braces { } to define a block of code. Python uses indentation.
+
+A code block (body of a function, loop etc.) starts with indentation and ends with the first unindented line. The amount of indentation is up to you, but it must be consistent throughout that block.
+
+Generally, four whitespaces are used for indentation and is preferred over tabs. Here is an example.
+
+ for i in range(1,11):
+    
+        print(i)
+    
+        if i == 5:
+        
+            break
+
+
+_________________________________________________________________________
+
+Variable:
+
+In most of the programming languages a variable is a named location used to store data in the memory. 
+
+Each variable must have a unique name called identifier. 
+
+Variables are similar as container that hold data which can be changed later throughout programming.
+
+
+for ex- you can suppose, variable as a bag to store books in it and those books can be replaced at anytime.
+ In Python we don't assign values to the variables, whereas Python gives the reference of the object (value) to the variable.
+
+
+........................................................................
+
+In Python, variables do not need declaration to reserve memory space. The "variable declaration" or "variable initialization" happens automatically when we assign a value to a variable.
+
+
+name="shweta"
+print(name)
+
+Python is a type inferred language, it can automatically infer (know)shweta is a String and declare name as a String.
+
+
+_________________________________________________________________________
+
+Data-Type::
+................................................
+
+Python is dynamically typed progrmming language.
+
+ 1. to represent whole value -
+   int, float, there is also complex data type it the best choice to choose the Python.
+
+In python various inbuilt data-types are-
+
+int, float, complex, bool, str, bytes, bytearray, range, list, tuple, set, frozenset, dict, none.
+
+Python provides some inbuilt function also-
+as:
+1.  print() is a function that is used for printing something.
+2.  type() defines the type of the datatype.
+
+ example- 
+        a=20
+	print(a)
+        type(a)
+
+Note**- In python everything is an object. 
+
+
+1. int: the number without decimal point, those value aare consider under the int data type.
+        a=20
+	print(a)
+        type(a)   //<class,'int'>
+
+this means that int is a class.
+
+long is used for taking large data in int form, but in python long data-type dosnt supported.
+
+
+2. str
+
+Python accepts single ('), double (") and triple (""" or """ for multi-line) quotes to denote string literals, as long as the same type of quote starts and ends the string.
+
+
+   print('shweta')  //char
+   print("shweta")  // string
+   print("""shweta chauhan """)    //
+
+
+3. float:
+ the value which is taken as the decimal values are comes uder the float value.
+	a=2.3
+	print(a)    ///2.3
+	type(a)     ////<type 'float'>
+
+
+
+4. bool- this is the data type which is used to take only true and false value.
+         a=True
+         True+True     ///2
+         
+
+
+5. List-  List is an ordered sequence of items. It is one of the most used datatype in Python and is very flexible. All the items in a list do not need to be of the same type.
+Declaring a list is pretty straight forward. Items separated by commas are enclosed within brackets [ ]
+
+	a = [1, 2.2, 'python']
+	print (a)
+	type(a)
+
+
+6. Tuple- Tuple is an ordered sequence of items same as list.The only difference is that tuples are immutable. Tuples once created cannot be modified.
+Tuples are used to write-protect data and are usually faster than list as it cannot change dynamically.
+It is defined within parentheses () where items are separated by commas.
+
+		a=(5,'program', 1+3j)
+		print (a)
+		type(a)
+
+
+7. Set- Set is an unordered collection of unique items. Set is defined by values separated by comma inside braces { }. Items in a set are not ordered.
+
+		a = {5,2,3,1,4}
+		print(a)
+		type(a)
+
+8. Dictionary- Dictionary is an unordered collection of key-value pairs.
+It is generally used when we have a huge amount of data. Dictionaries are optimized for retrieving data. We must know the key to retrieve the value.
+In Python, dictionaries are defined within braces {} with each item being a pair in the form key:value. Key and value can be of any type.
+
+		d = {1:'value','key':2}
+		print(a)
+		type(a)
+.........................................................................
+There is no need to define the the size and type of the data-type. 
+
+a=10
+print a
+name="shweta"
+print a
+marks=67.8
+print marks
+type(a)
+type(name)
+type(marks)
+
+
+
+Note**-
+we can't use keywords for the data specification.
+example- 
+	a=true
+	if we write this true keyword as data specification an error will be occurred as
+NameError: name 'true' is not defined
+
+
+_________________________________________________________________________
+ comments:
+
+# is used to define the single line comment in the python.
+
+  #helloo
+  print("python")
+
+""".....""" is used to define the multi-line comment in pyhton.
+
+'''    print(c)
+	print(sub)
+	print(mul)
+	print(div)  '''
+
+
+
+_________________________________________________________________________
+
+Type conversion
+...........................................
+We can convert between different data types by using different type conversion functions like int(), float(), str() etc.
+		
+			a=20
+			float(a)
+			str(a)
+
+1. int(): This function converts any data type to integer. ‘Base’ specifies the base in which string is if data type is string.
+
+2. float(): This function is used to convert any data type to a floating point number.
+
+3. ord() : This function is used to convert a character to integer.
+4. hex() : This function is to convert integer to hexadecimal string.
+
+5. oct() : This function is to convert integer to octal string.
+
+6. tuple() : This function is used to convert to a tuple.
+
+7. set() : This function returns the type after converting to set.
+
+8. list() : This function is used to convert any data type to a list type.
+
+
+__________________________________________________________________________
+
+** Note:
+      1.  Type Conversion is the conversion of object from one data type to another data type.
+      2.  Type Conversion is automatically performed by the Python interpreter.
+      3.  Python avoids the loss of data in Implicit Type Conversion.
+      
+      4. Explicit Type Conversion is also called Type Casting, the data types of object are converted using predefined function by user.
+       
+      5.  In Type Casting loss of data may occur as we enforce the object to specific data type.

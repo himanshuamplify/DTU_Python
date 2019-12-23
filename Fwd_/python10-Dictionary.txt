@@ -1,0 +1,120 @@
+Dictionarie:
+.........................................
+
+Dictionaries are Python’s implementation of a data structure that is more generally known as an associative array. 
+
+A dictionary consists of a collection of key-value pairs. Each key-value pair maps the key to its associated value.
+	*values can be any data-type and may be repeat.
+	*key must be immutable type and must be unique.
+
+A dictionary is a collection which is unordered, changeable, and indexed.. In Python dictionries are written with the curly brackets, and  they have key and value.
+
+ex:	d = {
+   		 <key>: <value>,
+   		 <key>: <value>,
+      		 .
+      		 .
+     		 .
+   		 <key>: <value>
+	}
+
+
+	x={
+ 		"name"="john",
+		"id"= 001,
+		"marks"=78.89
+	  }
+
+	print(x)
+
+
+How to access the items from the dictionary::
+.........................................................................
+   you can access the items of dictionary  by reffreing to its key-name, inside square brackets.
+ 	
+	x={ "id":01,
+    	    "name":"John"
+  	  }
+	val=x["name"]
+	print(val)
+
+........................................................................
+
+Dictionary is mutable in nature. we can implememt the dictionary and also update th dictionary.
+You can change the value of specific item by reffring to its keyname.
+
+	x={ "id":01,
+   	    "name":"John"
+  	  }
+	x["id"]=05
+	x["name"]="nick"
+	print(x)
+
+
+a we said dictionary is mutble in nature  so we can add an key and value as: 
+	x={ "id":01,
+   	    "name":"shweta"
+  	  }
+	x["branch"]="CSE"
+	print (x)
+	
+
+
+
+we can delete the items from the dictionary:
+ 	there are two ways for dteting the elements:
+	
+1. pop()- this is the function used to remove the arbitray items fromt he dictionary which takes the key_elements to the fromt the dictionary.		
+	
+	x={ "id":01,
+    	    "name":"shweta"
+    	  }
+	print(x.pop("id"))
+	print (x)
+
+
+
+2. clear()- this is a method which is used to remove all the elements at a time.
+
+ 	x={ "id":01,
+   	    "name":"shweta"
+   	 }
+	x.clear()
+	print(x)
+
+
+4. we can also use he del() to delete the individual item from the dictionary.
+
+
+
+.........................................................................
+         
+for loop to print the values of the dictionary by using values() method.
+
+Employee = {"Name": "John", "Age": 29, "salary":25000,"Company":"GOOGLE"}  
+for x in Employee.values():  
+    print(x); 
+
+
+
+...................................................
+
+Properties of Dictionary keys-
+
+1. In the dictionary, we can not store multiple values for the same keys. If we pass more than one values for a single key, then the value which is last assigned is considered as the value of the key.
+
+Consider the following example.
+
+Employee = {"Name": "John", "Age": 29, "Salary":25000,"Company":"GOOGLE","Name":"Johnn"}  
+for x,y in Employee.items():  
+    print(x,y)  
+
+
+2. In python, the key cannot be any mutable object. We can use numbers, strings, or tuple as the key but we can not use any mutable object like the list as the key in the dictionary.
+
+Consider the following example.
+
+Employee = {"Name": "John", "Age": 29, "salary":25000,"Company":"GOOGLE",Department ID:[100,201,301]}  
+for x,y in Employee.items():  
+    print(x,y)  
+...................................................

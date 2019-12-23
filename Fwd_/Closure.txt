@@ -1,0 +1,13 @@
+Python Closures: Introduction
+==============================
+
+Basically, the method of binding data to a function without actually passing them as parameters is called closure. It is a function object that remembers values in enclosing scopes even if they are not present in memory.
+
+
+What do I mean by binding data to a function without actually passing them as parameters?
+
+def func1():  #Outer function
+  msg = 'I belong to func1'
+  def func2(): #Nested function
+      print (msg)
+  return func2

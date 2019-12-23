@@ -1,0 +1,56 @@
+Nested functions
+Non-local variables in Python.
+
+Nested function in Python
+===========
+A function defined inside another function is simply called a nested function.
+
+def function_outside():
+   msg = 'Hello'
+   def function_inside():
+      print (msg)
+   function_inside()
+
+function_outside()
+Hello
+
+there is no local variable msg inside function_inside(), still, it prints the msg defined outside that function.
+
+That is because when a function doesn’t find a local variable it looks up for a local variable defined inside the function it is enclosed or nested within. This is called the Enclosing scope.
+
+Non-local variable in Python
+===========================
+
+def function_outside():
+  msg = 'Hi'
+  def function_inside():
+      msg = 'Hello'
+      print (msg)
+  function_inside()
+  print (msg)
+
+function_outside()
+output:
+======
+Hello
+Hi
+
+ when the function_outside() is called, first the function_inside() is invoked printing out the msg variable holding the value 'Hello'.
+
+After that when we print msg again, it prints the value 'Hi'. That is because as soon as function_inside() terminates, the variable defined inside it is also destroyed. So the variable local to outer function is printed.
+
+ what happens when we use a non-local variable in function_inside( ).
+
+def function_outside():
+  msg = 'Hi'
+  def function_inside():
+      nonlocal msg
+      msg = 'Hello'
+      print (msg)
+  function_inside()
+  print (msg)
+
+Now let’s try running this code in the interpreter.
+>>> function_outside()
+Hello
+Hello

@@ -1,0 +1,83 @@
+Python Date and time
+In the real world applications, there are the scenarios where we need to work with the date and time. There are the examples in python where we have to schedule the script to run at some particular timings.
+
+In python, the date is not a data type, but we can work with the date objects by importing the module named with datetime, time, and calendar.
+
+...................................................
+How to get the current time?
+The localtime() functions of the time module are used to get the current time tuple. Consider the following example.
+
+Example
+import time;  
+  
+#returns a time tuple   
+  
+print(time.localtime(time.time()))  
+.................................................
+
+Getting formatted time
+The time can be formatted by using the asctime() function of time module. It returns the formatted time for the time tuple being passed.
+
+Example
+import time;  
+  
+#returns the formatted time    
+  
+print(time.asctime(time.localtime(time.time())))  
+
+..................................................
+
+Python sleep time
+The sleep() method of time module is used to stop the execution of the script for a given amount of time. The output will be delayed for the number of seconds given as float.
+
+Consider the following example.
+
+Example
+import time  
+for i in range(0,5):  
+    print(i)  
+    #Each element will be printed after 1 second  
+    time.sleep(1)
+
+............................................
+
+The datetime Module
+The datetime module enables us to create the custom date objects, perform various operations on dates like the comparison, etc.
+
+To work with dates as date objects, we have to import datetime module into the python source code.
+
+Consider the following example to get the datetime object representation for the current time.
+
+Example
+import datetime;  
+  
+#returns the current datetime object   
+  
+print(datetime.datetime.now())  
+
+.............................................................
+Creating date objects
+We can create the date objects by passing the desired date in the datetime constructor for which the date objects are to be created.
+
+Consider the following example.
+
+Example
+import datetime;  
+  
+#returns the datetime object for the specified date  
+  
+print(datetime.datetime(2018,12,10))  
+
+.......................................................
+
+
+The calendar module
+Python provides a calendar object that contains various methods to work with the calendars.
+
+Consider the following example to print the Calendar of the last month of 2018.
+
+Example
+import calendar;  
+cal = calendar.month(2018,12)  
+#printing the calendar of December 2018  
+print(cal)  

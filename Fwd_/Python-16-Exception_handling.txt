@@ -1,0 +1,53 @@
+exception Handling......
+
+while we developing a program there are two types of error occured:
+  1. compile-time error - syntatical mistakes
+  2. run-time error- when the code is running in interpreter.
+
+Error can not be solved without removing a block of code or correcting that block of code.
+
+Errors detected during execution are called exceptions and are not unconditionally fatal. Exceptions that is runtime error can be handle by the use some exceptional handling concept.
+
+
+To handle the exception we use the  these keywords to handle the problem. 
+
+	try
+	except
+	finally
+
+  ------------------------------------------------------------------
+
+	try:  try is a keyword and it contains the code where exception can be occurred during the execution of the program.
+
+	except: except is a keyword which handle the problem that is occurred in the try block during the excution of the code.
+
+	finally: finally is a block that is always executed either the exception occurred in the code or not. 
+
+__________________________________________________________________
+
+Types of Exception:
+	ZeroDivisionError
+	IdentationError
+	NameError
+	typeError
+
+
+__________________________________________________________________
+	num1= int(input("entr the number 1"))
+	num2=int(input("enter the number2"))
+	try:
+    	   num=num1/num2
+	except ZeroDivisionError:
+           print("divide by zero")
+	finally:
+           print ("hellooo")
+
+
+
+__________________________________________________________________
+>>> 10 * (1/0)
+ZeroDivisionError: division by zero
+>>> 4 + spam*3
+NameError: name 'spam' is not defined
+>>> '2' + 2
+TypeError: Can't convert 'int' object to str implicitly

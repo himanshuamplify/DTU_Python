@@ -1,0 +1,103 @@
+Function:
+
+In python funtcion is a group of related statement that perform a specific task.
+ 
+ function help to break our program into smaller and modular chunks.
+
+as our program grows larger and larger function make it more organized and manageable.
+
+
+syntax:
+	def fun_name(parameter):
+		statements
+
+
+1. keyword def marks the start of function header.
+2. A function name is uniqly defined.
+3.Parameters are optional, by which we have to pass  the values to thee function.
+4. A colon marks that the end of the function header.
+5. return statement is also optional which is used to return the value.
+
+
+...............................................................
+
+Advantage of functions in python
+There are the following advantages of C functions.
+
+1. By using functions, we can avoid rewriting same logic/code again and again in a program.
+2. We can call python functions any number of times in a program and from any place in a program.
+3. We can track a large python program easily when it is divided into multiple functions.
+4. Reusability is the main achievement of python functions.
+5. However, Function calling is always overhead in a python program.
+
+
+How to call the function:
+.........................................
+ Once we have defined the function, we can call it from another function, program or even the python prompt.
+
+	def add():
+	     a=10
+	     b=20
+	     c=a+b
+	     print(c)
+	def use():
+	     add()
+
+
+
+...............................................
+There are two types of the function-
+ 	1. built-in function
+	2. user-defined function
+
+1. built-in function- those are function which are already define in the python are built-in function.
+
+2. user-defined function- those functions which are  defined by the user are the use-dfined function in python.
+
+
+
+.........................................................
+
+Parameters in function
+The information into the functions can be passed as the parameters. The parameters are specified in the parentheses. We can give any number of parameters, but we have to separate them with a comma.
+
+Consider the following example which contains a function that accepts a string as the parameter and prints it.
+
+
+
+
+................................................................
+
+Scope of variables
+The scopes of the variables depend upon the location where the variable is being declared. The variable declared in one part of the program may not 
+be accessible to the other parts.
+
+In python, the variables are defined with the two types of scopes.
+
+Global variables
+Local variables
+The variable defined outside any function is known to have a global scope whereas the variable defined inside a function is known to have a local scope.
+
+Consider the following example.
+
+def print_message():  
+    message = "hello !! I am going to print a message." # the variable message is local to the function itself  
+    print(message)  
+print_message()  
+print(message) 
+
+
+
+__________________________________________________________________________
+
+1. Enter the name and pin , if pin is correct make function for:
+	1. press 1 for credit()
+	2. press 2 for debit()
+	3. press 3 for check_amt()
+
+2. make function for: 
+	press 1 for add()
+	press 2 for palindrome()
+	press 3 for armstrong()
+
+

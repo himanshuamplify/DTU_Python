@@ -1,0 +1,102 @@
+Input-Output
+
+if i want to read the data dynamic from the keyboard .... what we will do??
+
+
+in python 2::
+..............
+
+there are two function available....
+ 1. x=raw_input(" enter the number")
+ 2. y=input("entr the number")
+
+what is diffrence between both of them......
+
+ x=raw_input(" enter the number")
+     means it takes only string data compulsory we have to required typcasting function.
+
+  y=input("entr the number")
+       it is not consider as str type what every type provided we are not required typecasting.
+
+
+Python-3
+..............
+in python 3 there is only-
+ x=input("enter the number")
+
+and it is more similar to the raw_input so it is compulsory for type_casting the variable.
+
+
+x=int(input("entr the st number"))
+y=(input("enter the scnd nmbr"))
+z=x+y
+print (z)
+
+
+.................................................
+
+print() is a function which is used to print the statement in python program.
+
+form-1:
+  
+print- without any arguments
+   It is used when you want to print line seprator then this print function is used.
+
+
+print("helloo")
+print("hiii")
+print
+print("hppp")
+
+ 
+
+print("helloo \n shweta")     ///for new line
+print("hiii \t rajnii")      // for tab space
+
+print(string)
++ ==> both argument should be string
+*==>  one argument should be string and another should be int. 
+
+
+print("helloo"+" hemaa")     // for concatenation
+print("shweta"*3)   //for repeatation
+
+
+print("abc"+"cdf")    => no space is avaialable between two strings
+print("abc","def")    => space are available in this line
+
+
+..................................................
+Programs:
+
+1. WAP for enter the employee id.
+2. WAP for enter the employee name.
+3. WAP for enter the employee salary.
+4. WAP for enter the employee address.
+5. WAP for enter the employee married or not.
+6.WAP for enter the employe designation.
+1. WAP to Print the marksheet of a student.
+2. WAP to  print the rate of 5 products and then calculate the total amount of product if there is 18% of GST in every Product.
+3. WAP to print the Employees detail.
+4. WAP to print the total salary of month if employess working on only 20 days and perday salary is 1000 rs.
+5. WAP to print the square of a number.
+
+
+
+
+
+
+
+
+
+_________________________________________________________________________
+Python Import-
+
+When our program grows bigger, it is a good idea to break it into different modules.
+A module is a file containing Python definitions and statements. Python modules have a filename and end with the extension .py.
+Definitions inside a module can be imported to another module or the interactive interpreter in Python. We use the import keyword to do this.
+
+For example, we can import the math module by typing in import math.
+
+
+    

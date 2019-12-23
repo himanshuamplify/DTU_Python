@@ -1,0 +1,84 @@
+  ____________________________File-Handling___________________________
+
+1. File handling is an important part of any web application.
+2. Python has several functions for creating, reading, updating, and deleting files.
+
+_______________________________________________________________________
+
+The open() function takes two parameters; filename, and mode.
+
+Modes:
+   There are four different methods (modes) for opening a file:
+	1. "r" - Read - Default value. Opens a file for reading, error if the file does not exist
+	2. "a" - Append - Opens a file for appending, creates the file if it does not exist.
+	3. "w" - Write - Opens a file for writing, creates the file if it does not exist.
+	4. "x" - Create - Creates the specified file, returns an error if the file exists
+
+
+In addition you can specify if the file should be handled as binary or text mode
+
+"t" - Text - Default value. Text mode
+"b" - Binary - Binary mode (e.g. images)
+
+_______________________________________________________________________
+
+	f = open("demofile.txt")
+	The code above is the same as:
+	f = open("demofile.txt", "rt")
+	Because "r" for read, and "t" for text are the default values, you do not need to specify them.
+
+
+_______________________________________________________________________
+
+To read the content from file we use r for read: 
+
+To open the file, use the built-in open() function.
+	f = open("demofile.txt", "r")
+	print(f.read(5))       //read only 5 characters
+	print(f.readline())    //read complete line
+	for x in f:            // read whole file line by line
+  		print(x) 
+
+
+  ___________________________________________________________________
+
+To write the content in file we use 'w' and 'a': 
+
+Open the file "demofile.txt" and overwrite the content:
+	f = open("demofile.txt", "w")
+	f.write("Woops! I have deleted the content!")
+
+Open the file "demofile.txt" and append content to the file:
+	f = open("demofile.txt", "a")
+
+
+
+  ___________________________________________________________________
+
+To delete a file, you must import the OS module, and run its os.remove() function:
+
+	import os
+	os.remove("demofile.txt")
+
+
+  _____________________________________________________________________
+
+Make directory:
+
+	import os
+	os.mkdir("shweta")
+	first.mkdir("second")
+	print("done")
+	os.rmdir("myfolder")
+	f.write("Now the file has one more line!")
+
+   ------------------------------------------------------------
+	File=open("D:\\x.txt","w")
+	print("file created")
+   -------------------------------------------------------------
+	import os
+	if( os.path.exists("D:\\ss.java")):
+    		os.remove("D:\\ss.java")
+   	 	print("removed")
+	else:
+   		print("not find")

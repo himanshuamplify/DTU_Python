@@ -1,0 +1,217 @@
+string Datatype-
+..................
+
+string is one of the most common object which is used by every  programming language.
+
+.....................................................................
+1. any sequence of characters with singl quotes or double quotes are string.
+	s="good"
+	s="morning"
+
+2. in python there is no char data type, even single char datatypes also treated as string .
+           ch='w'
+	   type(ch)
+
+
+3.there is one speciality in the python that is multi line string values as
+	'''   ...... '''
+	""" ......""""
+  
+	s1="""shweta
+    	   chauhan"""
+        print (s1)
+
+4. if you want to print single quote symbol as a apostrophy 'value.
+      'this is ram\'s book
+    you can use triple code symbols for using single quote and double quote as a symble.
+
+
+................................................................................
+
+how, we can access string characters.
+
+   1. by using index
+   2. by using slice operator
+
+
+1. by using index:
+         s="ssdn"
+         print (s[0])    ## we can use postive index nuber as well as negative index numbers.
+         positive index numbers ,means left to right
+         negtive index means , right to left.
+
+
+Write a progrm to accept some string from the keyboard and print all characters with index also. 
+
+
+
+2. by using slice operator we can get character from the string.
+
+   syntax:
+   ______
+    s[begin_index:end_index:step]  # tep value can be +ve or -ve.
+	
+		s[1:5:1]
+	# output: '2345'
+	s[1:7:2]
+	# output: '246'
+  
+.........................................................................
+
+mathmetical operators :
+    
+     + and * two operators that can be apply on the string/
+     
+    1. 	 + means concatention of the string.
+   ex-   "shweta"+"chauhan"       # shwetachauhan
+
+    2.  * means repeat the string.
+   ex-   "shweta"*3    or 3*"shweta"             #shwetashwetashweta
+
+
+.........................................................................
+
+String Membership Test-
+
+We can test if a sub string exists within a string or not, using the keyword in.
+
+'a' in 'program'
+True
+'at' not in 'battle'
+False
+
+.........................................................................
+
+upper()`
+lower()
+swapcase()
+title()
+capitalize()
+ isdigit()
+isalpha()
+
+........................................................................
+
+comparision of String:
+
+    we can use comparison operator (<,<=>,>=) for the string.
+     	s1=input("enter th string")
+	s2=input("enter the string 2")
+	if s1==s2:
+    	    print ("matched")
+	else:
+    	    print("not valid")
+
+................................................
+1. what will I do if we want to know that how many chracters prsent on the string.
+
+ by using len().
+
+
+........................................................................
+
+String objects are immutable then how can change the content by using the replace()-
+  Once we create the string object we can not change the content. this non-changeable behaviour is nothing but immutability. If we are trying to change the content by using any methodthen with those changes a new object will be created and chnges would not be happen in existing object.
+
+
+	s1='shwwta'
+	s2=s1.replace('w','e')
+	print(s1,id(s1))
+	print(s2,id(s2))
+
+.........................................................................
+
+spliting of string:
+
+    we can split the given string according to the specified seperator by using split().
+
+	s1='ssdn is located in the gurugram'
+	l=s1.split()
+	for val in l:
+    		print (val)
+
+
+
+a,b,c=input("enter the value").split()
+d=int(a)+int(b)+int(c)
+print(d)
+..........................................................................
+
+joining of  the string:
+
+   we can join a group of string by using the joining method with the help of seperator in the python.
+
+	s1=('a','b','c')
+	s='-'.join(s1)
+	print (s)
+
+........................................................................
+
+formatting the string:
+   we can format the string with variables value by using the replacement operator {} and format{} method.
+
+	name="john"
+	age=40
+	print ("{}'s age is{}".format(name,age))
+
+
+.........................................................................
+to remove the space between the string and from the string we use some function.
+
+lstrip() = before the string
+rstrip()= after the string
+strip()= begning and ending space are removed.
+                                                              
+.........................................................................
+1. WAP to reverse characters from the string.
+2. WAP to remove duplicate string from the string (mississippi) 
+3. each chrcter present how many times in the string.
+4. reverse the statements. "hello shweta good Morning"/
+2. how to access the string characters in backward and forward drection.
+         
+
+                 
+
+
+
+_________________________________________________________________________
+
+1. WAP to reverse characters from the string.
+	a='shweta'
+	print (a[::-1])      #slice_operator
+	
+	a='jhon'
+        print(''.join(reversed(a)))      #by using method
+
+
+	a='jhon'
+	i=len(a)
+	val=''
+	while i>0:
+	     val=val+s[i]
+	     i=i-1
+	print(val)
+
+2. reverse the statements. "hello shweta good Morning"/
+	s="There are some Mangoes"
+	l=s.split()
+	l1=[]
+	i=len(i)-1
+	while i>0
+	    l1.append(l[i])
+	    i=i-1
+	out=''.join(l1)
+	print (out)
+
+3. WAP to check the alphabetic values are in the string or not.
+
+str=input("enter the string")
+s1=s2=op=''
+i=len(str)
+for val in str:
+    if val.isalpha():
+        s1=s1+val
+    else:
+        s2=s2+val
+
+    

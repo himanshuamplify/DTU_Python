@@ -1,0 +1,236 @@
+____________________________LIST_______________________________________
+
+what is list??
+
+1. If you want to represent the group of individual object according the insertion order and  as a single entity.
+2. Duplicacy are allowed in the list.
+3. heterogenous objects are allowed in the list.
+4. list object are mutable , you can change list by increasing and decreasing the elements.
+5. It can have any number of items and they may be of different types (integer, float, string etc.)
+
+
+my_list = []
+my_list = [1, 2, 3]
+my_list = [1, "Hello", 3.4]
+
+
+Also, a list can even have another list as an item. This is called nested list.
+
+my_list = ["mouse", [8, 4, 6], ['a']]
+
+
+
+.........................................................................
+
+........................................................................
+
+
+how to access the list elements??
+
+1. by  using index 
+2. by using slice operator
+
+
+
+1. by using index:
+ 
+   We can use the index operator [] to access an item in a list. Index starts from 0. So, a list having 5 elements will have index from 0 to 4.
+
+  ***  Trying to access an element other that this will raise an IndexError. The index must be an integer. We can't use float or other types, this will result into TypeError. 
+
+
+
+my_list = ['p','r','o','b','e']
+
+
+print(my_list[0])
+
+
+
+print(my_list[2])
+
+print(my_list[4]) 
+print(my_list[5])    
+# Error! Only integer can be used for indexing
+ value.
+
+
+
+
+Nested List
+n_list =["Happy", [2,0,1,5]]
+
+
+
+Nested indexing
+
+
+print(n_list[0][1]) a  
+
+
+
+print(n_list[1][3])5
+
+
+
+2. by using slice operator-
+
+    my_list = ['p','r','o','g','r','a','m','i','z']
+
+    print(my_list[2:5])
+
+
+    print(my_list[:-5])
+    print(my_list[5:])
+    print(my_list[:])
+
+
+...........................................................................
+
+Python List Methods
+
+append() - Add an element to the end of the list
+extend() - Add all elements of a list to the another list
+insert() - Insert an item at the defined index
+remove() - Removes an item from the list
+pop() - Removes and returns an element at the given index
+clear() - Removes all items from the list
+index() - Returns the index of the first matched item
+count() - Returns the count of number of items passed as an argument
+sort() - Sort items in a list in ascending order
+reverse() - Reverse the order of items in the list
+copy() - Returns a shallow copy of the list
+all()-	Return True if all elements of the list are true (or if the list is empty).
+any()-	Return True if any element of the list is true. If the list is empty, return False.
+enumerate()-	Return an enumerate object. It contains the index and value of all the items of list as a tuple.
+len()-	Return the length (the number of items) in the list.
+list()-	Convert an iterable (tuple, string, set, dictionary) to a list.
+max()-	Return the largest item in the list.
+min()-	Return the smallest item in the list
+sorted()-	Return a new sorted list (does not sort the list itself).
+sum()-	Return the sum of all elements in the list.
+
+
+
+...........................................................................
+How to change or add elements to a list?
+
+  List are mutable, meaning, their elements can be changed unlike string or tuple.
+
+
+odd = [2, 4, 6, 8]
+
+
+odd[0] = 1            
+
+
+
+print(odd)
+
+
+odd[1:4] 
+
+print(odd)
+
+
+1. We can use assignment operator (=) to change an item or a range of items.
+We can add one item to a list using append() method or add several items using extend() method.
+
+odd = [1, 3, 5]
+odd.append(7)
+print(odd)
+list2=[9, 11, 13]
+odd.extend(list2)
+print(odd)
+
+
+
+2. We can also use + operator to combine two lists. This is also called concatenation.
+The * operator repeats a list for the given number of times.
+
+odd = [1, 3, 5]
+print(odd + [9, 7, 5])
+print(["re"] * 3)
+
+
+3. we can insert one item at a desired location by using the method insert() or insert multiple items by squeezing it into an empty slice of a list.
+
+odd = [1, 9]
+
+odd.insert(1,3)
+
+
+
+print(odd)
+
+
+odd[2:2] = [5, 7]
+
+
+
+print(odd)
+
+
+4. We can delete one or more items from a list using the keyword del. It can even delete the list entirely.
+
+my_list = ['p','r','o','b','l','e','m']
+del my_list[2]
+
+
+
+print(my_list)
+
+del my_list[1:5] 
+print(my_list)
+
+
+
+5. We can use remove() method to remove the given item or pop() method to remove an item at the given index.
+
+6. The pop() method removes and returns the last item if index is not provided. This helps us implement lists as stacks (first in, last out data structure).
+
+7. We can also use the clear() method to empty a list.
+
+my_list = ['p','r','o','b','l','e','m']
+
+my_list.remove('p')
+
+
+print(my_list)
+
+
+
+print(my_list.pop(1))
+
+
+
+print(my_list)
+
+print(my_list.pop())
+
+
+
+print(my_list)
+
+
+my_list.clear()
+
+
+
+print(my_list)
+
+
+__________________________________________________________________________
+
+List Comprehension:
+
+
+
+_________________________________________________________________________
+
+print a list and check that which is grater element inside the list.
+print a list and check that which element is even or odd.
+print the 3rd -5th element of the list by using slice operator and indexing both.
+print the element of list from begning to end by using slice operator.
+what is diffrence between append() and insert() give an example by printing the list.
+what is the diffrence between the pop() and remove() give an example by printing the list.
