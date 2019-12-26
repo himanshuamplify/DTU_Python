@@ -1,0 +1,175 @@
+1. Write a Pandas program to import excel data (coalpublic2013.xlsx ) into a Pandas dataframe.
+import pandas as pd
+import numpy as np
+df = pd.read_excel('E:\coalpublic2013.xlsx')
+print(df.head)
+
+2. Write a Pandas program to get the data types of the given excel data (coalpublic2013.xlsx ) fields.
+import pandas as pd
+import numpy as np
+df = pd.read_excel('E:\coalpublic2013.xlsx')    
+df.dtypes
+
+3. Write a Pandas program to read specific columns from a given excel file.
+import pandas as pd
+import numpy as np
+cols = [1, 2, 4]
+df = pd.read_excel('E:\coalpublic2013.xlsx', usecols=cols)
+df
+
+4. Write a Pandas program to find the sum, mean, max, min value of 'Production (short tons)' column of coalpublic2013.xlsx file.
+import pandas as pd
+import numpy as np
+df = pd.read_excel('E:\coalpublic2013.xlsx')
+print("Sum: ",df["Production"].sum()) 
+print("Mean: ",df["Production"].mean())
+print("Maximum: ",df["Production"].max())
+print("Minimum: ",df["Production"].min()) 
+
+5. Write a Pandas program to insert a column in the sixth position of the said excel sheet and fill it with NaN values.
+import pandas as pd
+import numpy as np
+df = pd.read_excel('E:\coalpublic2013.xlsx')
+df.insert(3, "column1", np.nan)
+print(df.head) 
+
+6. Write a Pandas program to import excel data (coalpublic2013.xlsx ) skipping first twenty rows into a Pandas dataframe.
+import pandas as pd
+import numpy as np
+df = pd.read_excel('E:\coalpublic2013.xlsx', skiprows = 20)
+df
+
+7. Write a Pandas program to add summation to a row of the given excel file.
+import pandas as pd
+import numpy as np
+df = pd.read_excel('E:\coalpublic2013.xlsx')
+sum_row=df[["Production", "Labor_Hours"]].sum()
+df_sum=pd.DataFrame(data=sum_row).T
+df_sum=df_sum.reindex(columns=df.columns)
+df_sum
+
+8. Write a Pandas program to import excel data (coalpublic2013.xlsx ) into a Pandas dataframe and display the last ten rows.
+import pandas as pd
+import numpy as np
+df = pd.read_excel('E:\coalpublic2013.xlsx')
+df.tail(n=10)
+
+9. Write a Pandas program to create a subtotal of "Labor Hours" against MSHA ID from the given excel data (coalpublic2013.xlsx ).
+import pandas as pd
+import numpy as np
+df = pd.read_excel('E:\coalpublic2013.xlsx')
+df_sub=df[["MSHA ID","Labor_Hours"]].groupby('MSHA ID').sum()
+df_sub
+
+10. Write a Pandas program to import excel data (coalpublic2013.xlsx ) into a dataframe and find a specific MSHA ID.
+import pandas as pd
+import numpy as np
+df = pd.read_excel('E:\coalpublic2013.xlsx')    
+df[df["MSHA ID"]==102901].head()
+
+11. Write a Pandas program to import excel data (coalpublic2013.xlsx ) into a dataframe and find details where "Labor Hours" > 20000.
+import pandas as pd
+import numpy as np
+df = pd.read_excel('E:\coalpublic2013.xlsx')    
+df[df["Labor_Hours"] > 20000].head()
+
+12. Write a Pandas program to import excel data (coalpublic2013.xlsx ) into a dataframe and find details where "Mine Name" starts with "P".
+import pandas as pd
+import numpy as np
+df = pd.read_excel('E:\coalpublic2013.xlsx')    
+df[df["Mine_Name"].map(lambda x: x.startswith('P'))].head()
+
+13. Write a Pandas program to import excel data (coalpublic2013.xlsx ) into a dataframe and find all records that include two specific MSHA ID.
+import pandas as pd
+import numpy as np
+df = pd.read_excel('E:\coalpublic2013.xlsx')    
+df[df["MSHA ID"].isin([102976,103380])].head()
+
+14. Write a Pandas program to import excel data (coalpublic2013.xlsx ) into a Pandas dataframe and find a list of specified customers by name.
+import pandas as pd
+import numpy as np
+df = pd.read_excel('E:\coalpublic2013.xlsx')    
+df.query('Mine_Name == ["Shoal Creek Mine", "Piney Woods Preparation Plant"]').head()
+
+15. Write a Pandas program to import excel data (employee.xlsx ) into a Pandas dataframe and find a list of employees where hire_date> 01-01-07.
+import pandas as pd
+import numpy as np
+df = pd.read_excel('E:\employee.xlsx')
+df[df['hire_date'] >='20070101']
+
+16. Write a Pandas program to import excel data (employee.xlsx ) into a Pandas dataframe and to sort the records by the hire_date column.
+import pandas as pd
+import numpy as np
+df = pd.read_excel('E:\employee.xlsx')
+result = df.sort_values('hire_date')
+result
+
+17. Write a Pandas program to import excel data (employee.xlsx ) into a Pandas dataframe and find a list of employees where hire_date between two specific month and year.
+import pandas as pd
+import numpy as np
+df = pd.read_excel('E:\employee.xlsx')
+result = df[(df['hire_date'] >='Jan-2005') & (df['hire_date'] <= 'Dec-2006')].head()
+result
+
+18. Write a Pandas program to import excel data (employee.xlsx ) into a Pandas dataframe and find a list of employees of a specified year.
+import pandas as pd
+import numpy as np
+df = pd.read_excel('E:\employee.xlsx')
+df2 = df.set_index(['hire_date'])
+result = df2["2005"]
+result
+
+19. Write a Pandas program to import excel data (employee.xlsx ) into a Pandas dataframe and convert the data to use the hire_date as the index.
+import pandas as pd
+import numpy as np
+df = pd.read_excel('E:\employee.xlsx')
+result = df.set_index(['hire_date'])
+result
+
+20. Write a Pandas program to import given excel data (employee.xlsx ) into a Pandas dataframe and sort based on multiple given columns.
+import pandas as pd
+import numpy as np
+df = pd.read_excel('E:\employee.xlsx')
+result = df.sort_values(by=['first_name','last_name'],ascending=[0,1])
+result
+
+21. Write a Pandas program to import sheet2 data from a given excel data (employee.xlsx ) into a Pandas dataframe.
+import pandas as pd
+import numpy as np
+df = pd.read_excel('E:\employee.xlsx',sheet_name=1)
+print(df)
+
+22. Write a Pandas program to import three datasheets from a given excel data (coalpublic2013.xlsx ) in to a single dataframe.
+import pandas as pd
+import numpy as np
+df1 = pd.read_excel('E:\employee.xlsx',sheet_name=0)
+df2 = pd.read_excel('E:\employee.xlsx',sheet_name=1)
+df3 = pd.read_excel('E:\employee.xlsx',sheet_name=2)
+df = pd.concat([df1, df2, df3])
+print(df)
+
+23. Write a Pandas program to import excel data (coalpublic2013.xlsx ) into a dataframe and draw a bar plot where each bar will represent one of the top 10 production.
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+df = pd.read_excel('E:\coalpublic2013.xlsx')
+sorted_by_production = df.sort_values(['Production'], ascending=False).head(10)
+sorted_by_production['Production'].head(10).plot(kind="barh")
+plt.show()
+
+24. Write a Pandas program to import excel data (coalpublic2013.xlsx ) into a dataframe and draw a bar plot comparing year, MSHA ID, Production and Labor_hours of first ten records.
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+df = pd.read_excel('E:\coalpublic2013.xlsx')
+df.head(10).plot(kind='bar', figsize=(20,8))
+plt.show()
+
+25. Write a Pandas program to import three datasheets from a given excel data (employee.xlsx ) into a single dataframe and export the result into new Excel file.
+import pandas as pd
+import numpy as np
+df1 = pd.read_excel('E:\employee.xlsx',sheet_name=0)
+df2 = pd.read_excel('E:\employee.xlsx',sheet_name=1)
+df3 = pd.read_excel('E:\employee.xlsx',sheet_name=2)
+df = pd.concat([df1, df2, df3])
+df.to_excel('e:\output.xlsx', index=False)
