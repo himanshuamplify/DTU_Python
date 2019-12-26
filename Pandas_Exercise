@@ -1,0 +1,159 @@
+1. Write a Python Pandas program to get the columns of the DataFrame (movies_metadata.csv file)
+
+import pandas as pd
+import numpy as np
+df = pd.read_csv('movies_metadata.csv')
+print("Columns of the DataFrame:")
+print(df.columns)
+
+2. Write a Pandas program to get the information of the DataFrame (movies_metadata.csv file)including data types and memory usage.
+
+import pandas as pd
+df = pd.read_csv('movies_metadata.csv')
+result = df.info()
+print("Details of the DataFrame:")
+print(result)
+
+3. Write a Pandas program to get the details of the thrid movie of the DataFrame (movies_metadata.csv file).
+
+import pandas as pd
+df = pd.read_csv('movies_metadata.csv')
+third_movie = df.iloc[2]
+print("Details of the third moviee:")
+print(third_movie)
+
+4. Write a Pandas program to count the number of rows and columns of the DataFrame (movies_metadata.csv file).
+
+import pandas as pd
+df = pd.read_csv('movies_metadata.csv')
+result = df[['title', 'genres']]
+print("Details of title and genres:")
+print(result)
+
+5. Write a Pandas program to get the details of the columns title and genres of the DataFrame.
+
+import pandas as pd
+df = pd.read_csv('movies_metadata.csv')
+result = df[['title', 'genres']]
+print("Details of title and genres:")
+print(result)
+
+6. Write a Pandas program to get the details of the movie with title 'Grumpier Old Men'.
+
+import pandas as pd
+df = pd.read_csv('movies_metadata.csv')
+#Set the index to the title
+df = df.set_index('title')
+#Details of the movie 'Grumpier Old Men'
+result = df.loc['Grumpier Old Men']
+print("Details of the movie 'Grumpier Old Men:")
+print(result)
+
+
+7. Write a Pandas program to get the details of  fifth movie of the DataFrame. 
+
+import pandas as pd
+df = pd.read_csv('movies_metadata.csv')
+#Set the index to the title
+df = df.set_index('title')
+#Details of the movie 'Grumpier Old Men'
+result = df.loc['Grumpier Old Men']
+print("Details of the movie 'Grumpier Old Men:")
+print(result)
+
+8. Write a Pandas program to create a smaller dataframe with a subset of all features.
+
+import pandas as pd
+df = pd.read_csv('movies_metadata.csv')
+# Create a smaller dataframe
+small_df = df[['title', 'release_date', 'budget', 'revenue', 'runtime']]
+print("Smaller DataFrame:")
+print(small_df.head())
+
+9. Write a Pandas program to display the first 10 rows of the DataFrame.
+
+import pandas as pd
+df = pd.read_csv('movies_metadata.csv')
+#Display the first 10 rows
+result = df.head(10)
+print("First 10 rows of the DataFrame:")
+print(result)
+
+10. Write a Pandas program to sort the DataFrame based on release_date.
+
+import pandas as pd
+df = pd.read_csv('movies_metadata.csv')
+# Create a smaller dataframe
+small_df = df[['title', 'release_date', 'budget', 'revenue', 'runtime']]
+result = small_df.sort_values('release_date')
+print("DataFrame based on release date.")
+print(result)
+
+11. Write a Pandas program to access those movies, released after 1995-01-01.
+
+import pandas as pd
+df = pd.read_csv('movies_metadata.csv')
+# Create a smaller dataframe
+small_df = df[['title', 'release_date', 'budget', 'revenue', 'runtime']]
+result = small_df[small_df['release_date'] > '1995-01-01']
+print("DataFrame based on release date>'1995-01-01'.")
+print(result)
+
+12. Write a Pandas program to sort movies on runtime in descending order.
+
+import pandas as pd
+df = pd.read_csv('movies_metadata.csv')
+small_df = df[['title', 'release_date', 'budget', 'revenue', 'runtime']]
+#Sort Movies based on runtime (in descending order)
+result = small_df.sort_values('runtime', ascending=False)
+print("DataFrame sort on Runtime.")
+print(result.head())
+
+13. Write a Pandas program to get those movies whose revenue more than 2 million and spent less than 1 million.
+
+import pandas as pd
+df = pd.read_csv('movies_metadata.csv')
+small_df = df[['title', 'release_date', 'budget', 'revenue', 'runtime']]
+#Sort Movies based on runtime (in descending order)
+result = small_df.sort_values('runtime', ascending=False)
+print("DataFrame sort on Runtime.")
+print(result.head())
+
+14. Write a Pandas program to get the longest runtime and shortest runtime.
+
+import pandas as pd
+df = pd.read_csv('movies_metadata.csv')
+small_df = df[['title', 'runtime']]
+run_time = small_df['runtime']
+print(small_df)
+print("===============================================")
+print("Longest runtime")
+print(run_time.max())
+print("Shortest runtime")
+print(run_time.min())
+
+15. Write a Pandas program to compute the calculate the number of votes garnered by the 70% movie.
+
+import pandas as pd
+df = pd.read_csv('movies_metadata.csv')
+result = df['vote_count'].quantile(0.70)
+print(result)
+
+16. Write a Pandas program to display the movies (title, runtime) longer than 30 minutes and shorter than 360 minutes.
+
+import pandas as pd
+df = pd.read_csv('movies_metadata.csv')
+small_df = df[['title', 'runtime']]
+result = small_df[(small_df['runtime'] >= 30) & (small_df['runtime'] <= 360)]
+print("List of movies longer than 30 minutes and shorter than 360 minutes:")
+print(result)
+
+17. Write a Pandas program to display the movies (title, number of votes) that received specified number of votes
+
+import pandas as pd
+df = pd.read_csv('movies_metadata.csv')
+n = 500
+small_df = df[['title', 'vote_count']]
+result = small_df[small_df['vote_count'] >= n]
+print("List of movies longer than 30 minutes and shorter than 360 minutes:")
+print(result)
